@@ -17,6 +17,11 @@ app bundle, `bin/barpop.app`, so macOS asks for Calendar, Bluetooth and
 Location access in barpop's own name. `bin/barpop` is the same binary for the
 CLI commands.
 
+## Develop
+
+`make setup` installs the git hooks (`lefthook.yml`: gitleaks on staged
+changes; versions in `mise.toml`). Needs mise.
+
 ## Use
 
 ```bash

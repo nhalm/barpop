@@ -11,3 +11,8 @@ $(APP)/MacOS/barpop: $(SOURCES) Info.plist
 	cp Info.plist $(APP)/Info.plist
 	swiftc -O -swift-version 6 -o $@ $(SOURCES)
 	codesign --force --sign - --identifier local.dotfiles.barpop bin/barpop.app
+
+# Git hooks for working on barpop: gitleaks before each commit.
+.PHONY: setup
+setup:
+	mise trust && mise install && lefthook install
